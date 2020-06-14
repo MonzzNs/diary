@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table table-sm table-hover">
+  <thead class="bg-dark text-light">
+    <tr>
+      <th scope="col">#</th>
+      <th style="width: 30%;" scope="col">Title</th>
+      <th style="width: 30%;" scope="col">Date</th>
+      <th scope="col"> - </th>
+    </tr>
+  </thead>
+
+  <tbody class="bg-light">
+  {% for obj in obj %}
+    <tr style="border: 1px solid white;margin-top: 2%;">
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{obj.title}}</td>
+      <td>{{obj.date}}</td>
+      <td>
+        <a href="/view/{{obj.slug}}" class="btn btn-outline-info col-12">View</a>
+      </td>
+    </tr>
+    {% endfor %}  
+  </tbody>
+</table>
+
+<center>
+<div class="btn-add">
+  <a href="{% url 'create' %}" class="btn btn-outline-primary col-8">New Diary <i class="fa fa-plus"></i></a>
+</div>
+</center>
+
+{% if users.has_other_pages %}
+  <ul class="pagination">
+    {% if users.has_previous %}
+      <li><a href="?page={{ users.previous_page_number }}">«</a></li>
+    {% else %}
+      <li class="disabled"><span>«</span></li>
+    {% endif %}
+    {% for i in users.paginator.page_range %}
+      {% if users.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if users.has_next %}
+      <li><a href="?page={{ users.next_page_number }}">»</a></li>
+    {% else %}
+      <li class="disabled"><span>»</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+{% endblock content %}

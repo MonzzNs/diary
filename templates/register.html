@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MyDiary</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="icon" type="image/png" href="/media/assets/diary (1).png">
+    <link href="{% static "/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "/fontawesome/css/all.min.css" %}">
+    <link rel="stylesheet" href="{% static "/css/custom.css/" %}" %}">
+    <link href="{% static "/css/simple-sidebar.css" %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+        </button>
+        <div style="display: inline-flex;" class="brand">
+            <h5 style="color: orange;">My</h5>
+            <h3 class="text-light">Diary</h3>
+        </div>
+    </nav>
+
+
+    <div class="message col-5 rounded">
+        <center>
+            <h3>Note : </h3>
+            <hr>
+            <p>To maintain your privacy, and prevent losing notes that you have made, you must register first</p>
+        </center>
+    </div>
+    <center>
+        <h1>Register </h1>
+        <hr>
+
+        <form method="POST" class="col-10">
+            {% csrf_token %}
+            <div class="form-group mb-4">
+                <label>Username</label>
+                <small class="form-text text-muted">Must be more than 5 characters and not more than 50
+                    characters</small>
+                {{form.username}}
+            </div>
+
+            <div class="form-group mb-4">
+                <label>Full Name</label>
+                <small class="form-text text-muted">Don't use any symbols</small>
+                {{form.full_name}}
+            </div>
+
+            <div class="form-group mb-4">
+                <label>Password</label>
+                <small class="form-text text-muted">Must be more than 8 characters</small>
+                {{form.password1}}
+            </div>
+
+            {% for error in form.non_field_errors %}
+            <div class="err_msg rounded mb-3">
+                <h5>{{error}}</h5>
+            </div>
+            {% endfor %}
+
+            <div class="form-group mb-4">
+                <label>Password Confirmation</label>
+                <small class="form-text text-muted">Repeat the password</small>
+                {{form.password2}}
+            </div>
+
+            <hr>
+            <p class="have">Already have an account ? <a href="{% url 'login' %}">Login</a></p>
+            <button style="margin-bottom: 7%;margin-top: 2%;" type="submit"
+                class="btn btn-primary col-3">Register</button>
+        </form>
+    </center>
+</body>
+
+</html>

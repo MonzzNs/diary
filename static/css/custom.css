@@ -1,0 +1,104 @@
+/* register.html */
+
+.err_msg {
+    border: 1px solid #EA2027;
+    background-color: #EA2027;
+    padding: 1%;
+}
+
+.err_msg>h5 {
+    color: #dfe6e9;
+}
+
+.message {
+    border: 1px solid black;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 58%;
+    padding: 1%;
+}
+
+.have>a {
+    text-decoration: none;
+    color: #0984e3;
+}
+
+.have>a:hover {
+    color: #74b9ff;
+}
+
+label {
+    margin-bottom: -1%;
+    font-weight: bolder;
+}
+
+.middle {
+    text-align: center;
+}
+
+/* end */
+
+/* login.html */
+
+.login_m {
+    border-radius: unset;
+    background-color: #4b7bec;
+    border: 1px solid #3867d6;
+    padding: 1%;
+}
+
+.login_err_m {
+    background-color: #ff3838;
+    border: 1px solid #ff3838;
+    padding: 1%;
+}
+
+/* end */
+
+/* form.html */
+
+#title {
+    font-size: 150%;
+    padding: unset;
+    background-color: #dfe6e9;
+    border-radius: unset;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#diary {
+    background-image: -webkit-linear-gradient(left, #dfe6e9 10px, transparent 10px), -webkit-linear-gradient(right, #dfe6e9 10px, transparent 10px), -webkit-linear-gradient(#dfe6e9 30px, #ccc 30px, #ccc 31px, #dfe6e9 31px);
+    background-image: -moz-linear-gradient(left, #dfe6e9 10px, transparent 10px), -moz-linear-gradient(right, #dfe6e9 10px, transparent 10px), -moz-linear-gradient(#dfe6e9 30px, #ccc 30px, #ccc 31px, #dfe6e9 31px);
+    background-image: -ms-linear-gradient(left, #dfe6e9 10px, transparent 10px), -ms-linear-gradient(right, #dfe6e9 10px, transparent 10px), -ms-linear-gradient(#dfe6e9 30px, #ccc 30px, #ccc 31px, #dfe6e9 31px);
+    background-image: -o-linear-gradient(left, #dfe6e9 10px, transparent 10px), -o-linear-gradient(right, #dfe6e9 10px, transparent 10px), -o-linear-gradient(#dfe6e9 30px, #ccc 30px, #ccc 31px, #dfe6e9 31px);
+    background-image: linear-gradient(left, #dfe6e9 10px, transparent 10px), linear-gradient(right, #dfe6e9 10px, transparent 10px), linear-gradient(#dfe6e9 30px, #ccc 30px, #ccc 31px, #dfe6e9 31px);
+    background-size: 100% 100%, 100% 100%, 100% 31px;
+    border: 1px solid grey;
+    border-radius: unset;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 31px;
+    padding: unset;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+}
+
+.user_id{
+    visibility: hidden;
+}
+
+
+/* end */
+
+/* confirmation */
+
+
+/* end */
+
+.copyright {
+    margin-top: 20%;
+}
